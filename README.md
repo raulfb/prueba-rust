@@ -46,3 +46,17 @@ cargo --version
 ```
 rustc nombreArchivo.rs
 ```
+
+### Crear proyecto con cargo
+
+```
+cargo new prueba-cargo
+```
+
+### Construir y correr programa con cargo
+
+```
+cargo run
+```
+
+
