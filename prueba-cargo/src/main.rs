@@ -1,7 +1,10 @@
 fn main() {
     // println!("Hello, world!");
-    let numero = "Tres";
-    println!("El numero es: {}",numero);
-    let numero=2;
-    println!("{}",numero+2);
+
+    // let numero = "Tres";
+    // println!("El numero es: {}",numero);
+    // let numero=2;
+    // println!("{}",numero+2);
+    const NUMERO:i32 =3;
+    println!("{}",NUMERO);
 }
