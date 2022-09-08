@@ -53,13 +53,26 @@
 
 // }
 
-fn modifica(cadena:&mut String){
-    cadena.push_str(" amigos !")
-    // println!("{}",cadena);
-    // cadena
-}
+// fn modifica(cadena:&mut String){
+//     cadena.push_str(" amigos !")
+//     // println!("{}",cadena);
+//     // cadena
+// }
 
+struct Usuario{
+    nombre:String,
+    email:String,
+    edad:u8,
+    activo:bool
+}
 fn main() {
+    let usuario1 = Usuario{
+        nombre: String::from("Raul"),
+        email: String::from("raul@example.com"),
+        edad:26,
+        activo:true
+    };
+    println!("{}",usuario1.nombre);
     //1..=10 del 1 al 10
     // for numero in (1..=10).rev(){
     //     println!("{}",numero);
@@ -71,10 +84,10 @@ fn main() {
     // println!("{}",y);
     // println!("{}",j)
 
-    let mut cadena= String::from("Hola");
-    modifica(&mut cadena);
-    // println!("La longitud de la cadena es: {}",y);
-    println!("La cadena es: {}",cadena)
+    // let mut cadena= String::from("Hola");
+    // modifica(&mut cadena);
+    // // println!("La longitud de la cadena es: {}",y);
+    // println!("La cadena es: {}",cadena)
     // let cadena2 = cadena.clone();
    
     // println!("{}",cadena2);
