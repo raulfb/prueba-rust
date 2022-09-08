@@ -54,9 +54,8 @@
 // }
 
 fn main() {
-    let array_numeros =[10,20,500,33,11,22];
-
-    for numero in array_numeros.iter(){
+    //1..=10 del 1 al 10
+    for numero in 1..10{
         println!("{}",numero);
     }
     
