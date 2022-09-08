@@ -66,12 +66,13 @@ struct Usuario{
     activo:bool
 }
 fn main() {
-    let usuario1 = Usuario{
+    let mut usuario1 = Usuario{
         nombre: String::from("Raul"),
         email: String::from("raul@example.com"),
         edad:26,
         activo:true
     };
+    usuario1.nombre= String::from("pepe");
     println!("{}",usuario1.nombre);
     //1..=10 del 1 al 10
     // for numero in (1..=10).rev(){
