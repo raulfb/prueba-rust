@@ -55,13 +55,18 @@
 
 fn main() {
     let array_numeros =[10,20,500,33,11,22];
-    let mut indice =0;
 
-    while indice < 6{
-        println!("El valor es: {}",array_numeros[indice]);
-        indice +=1;
-        // contador -=1;
+    for numero in array_numeros.iter(){
+        println!("{}",numero);
     }
+    
+    
+    // let mut indice =0;
+
+    // while indice < 6{
+    //     println!("El valor es: {}",array_numeros[indice]);
+    //     indice +=1;    
+    // }
     // let resultado= loop {
     //     // println!("Hola");
     //     // println!("{}",contador);
