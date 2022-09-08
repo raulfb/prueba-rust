@@ -53,9 +53,8 @@
 
 // }
 
-fn calcula_longitud(cadena:&String)-> usize{
-    let aux = cadena.len();
-    aux
+fn modifica(cadena:&mut String){
+    cadena.push_str(" amigos !")
     // println!("{}",cadena);
     // cadena
 }
@@ -72,9 +71,9 @@ fn main() {
     // println!("{}",y);
     // println!("{}",j)
 
-    let cadena= String::from("AAAA");
-    let y= calcula_longitud(&cadena);
-    println!("La longitud de la cadena es: {}",y);
+    let mut cadena= String::from("Hola");
+    modifica(&mut cadena);
+    // println!("La longitud de la cadena es: {}",y);
     println!("La cadena es: {}",cadena)
     // let cadena2 = cadena.clone();
    
