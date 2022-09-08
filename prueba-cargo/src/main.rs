@@ -54,19 +54,25 @@
 // }
 
 fn main() {
-    let mut contador:u64=0;
+    let array_numeros =[10,20,500,33,11,22];
+    let mut indice =0;
 
-    let resultado= loop {
-        // println!("Hola");
-        // println!("{}",contador);
+    while indice < 6{
+        println!("El valor es: {}",array_numeros[indice]);
+        indice +=1;
+        // contador -=1;
+    }
+    // let resultado= loop {
+    //     // println!("Hola");
+    //     // println!("{}",contador);
         
-        contador += 1;
+    //     contador += 1;
         
-        if contador >= 10{
-            break contador;
-        }
-    };
-    println!("el resultado es: {}",resultado)
+    //     if contador >= 10{
+    //         break contador;
+    //     }
+    // };
+    // println!("el resultado es: {}",resultado)
 
     // let numero:i64=5;
     // let numero2:i64= 4;
