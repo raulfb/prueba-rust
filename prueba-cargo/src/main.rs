@@ -55,10 +55,26 @@
 
 fn main() {
     //1..=10 del 1 al 10
-    for numero in (1..=10).rev(){
-        println!("{}",numero);
-    }
+    // for numero in (1..=10).rev(){
+    //     println!("{}",numero);
+    // }
+
+    // let j=3;
+    // let y=j;
+
+    // println!("{}",y);
+    // println!("{}",j)
+
+    let cadena= String::from("AAAA");
+    let cadena2 = cadena.clone();
+    println!("{}",cadena2);
+    // let cadena =String::from("EEEEE11111");
+    // println!("cadena {}",cadena);
+    println!("{}",cadena);
+
     
+    //let cadena = String::from("holaaa");
+    //println!("{}",cadena)
     
     // let mut indice =0;
 
