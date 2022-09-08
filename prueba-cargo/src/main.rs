@@ -53,6 +53,13 @@
 
 // }
 
+fn calcula_longitud(cadena:&String)-> usize{
+    let aux = cadena.len();
+    aux
+    // println!("{}",cadena);
+    // cadena
+}
+
 fn main() {
     //1..=10 del 1 al 10
     // for numero in (1..=10).rev(){
@@ -66,11 +73,15 @@ fn main() {
     // println!("{}",j)
 
     let cadena= String::from("AAAA");
-    let cadena2 = cadena.clone();
-    println!("{}",cadena2);
-    // let cadena =String::from("EEEEE11111");
-    // println!("cadena {}",cadena);
-    println!("{}",cadena);
+    let y= calcula_longitud(&cadena);
+    println!("La longitud de la cadena es: {}",y);
+    println!("La cadena es: {}",cadena)
+    // let cadena2 = cadena.clone();
+   
+    // println!("{}",cadena2);
+    // // let cadena =String::from("EEEEE11111");
+    // // println!("cadena {}",cadena);
+    // println!("{}",cadena);
 
     
     //let cadena = String::from("holaaa");
