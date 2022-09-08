@@ -55,7 +55,7 @@
 
 fn main() {
     //1..=10 del 1 al 10
-    for numero in 1..10{
+    for numero in (1..=10).rev(){
         println!("{}",numero);
     }
     
