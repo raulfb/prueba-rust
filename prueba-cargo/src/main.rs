@@ -62,18 +62,33 @@
 struct Usuario{
     nombre:String,
     email:String,
-    edad:u8,
+    edad:u32,
     activo:bool
 }
+
+fn crear_usuario(nombre:String,email:String,edad:u32) -> Usuario{
+    Usuario{
+        nombre,
+        email,
+        edad,
+        activo:true,
+    }
+
+}
+
+
 fn main() {
-    let mut usuario1 = Usuario{
-        nombre: String::from("Raul"),
-        email: String::from("raul@example.com"),
-        edad:26,
-        activo:true
-    };
-    usuario1.nombre= String::from("pepe");
-    println!("{}",usuario1.nombre);
+    let usuario2 =crear_usuario(String::from("Rauwwwl"), String::from("raul@example.com"), 26);
+    println!("{}",usuario2.nombre)
+    // println!("{}",usuario2.nombre);
+    // let mut usuario1 = Usuario{
+    //     nombre: String::from("Raul"),
+    //     email: String::from("raul@example.com"),
+    //     edad:26,
+    //     activo:true
+    // };
+    // usuario1.nombre= String::from("pepe");
+    // println!("{}",usuario1.nombre);
     //1..=10 del 1 al 10
     // for numero in (1..=10).rev(){
     //     println!("{}",numero);
