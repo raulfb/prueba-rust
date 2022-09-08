@@ -59,6 +59,11 @@ cargo new prueba-cargo
 cargo run
 ```
 
+### nightly version.
+```
+rustup default nightly
+```
+
 ### Tipos de datos
 
 #### Tipos enteros
@@ -88,5 +93,12 @@ Para solamente numeros enteros positivos:
 #### Tipo Caracter
     char
     Ejemplo: let caracter:char ='R';
+
+
+### Librerias interesantes
+
+Rocket: para crear un servidor web
+Serde: para serializar y deserializar estructureas de datos de Rust
+Diesel: ORM
 
 

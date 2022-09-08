@@ -11,59 +11,100 @@
 //     }
 // }
 
-fn sumar (num:i64,num2:i64)->i64{
-    let suma= num+num2;
-    //return suma
-    suma
-    // println!("{}", resultado);
 
-}
+// fn sumar (num:i64,num2:i64)->i64{
+//     let suma= num+num2;
+//     //return suma
+//     suma
+//     // println!("{}", resultado);
 
-fn restar (num:i64,num2:i64)-> i64{
-    let resta =num -num2;
-    // return resta
-    resta
-    // println!("{}",resultado)
-}
+// }
 
-fn multiplicar(num:i64,num2:i64)-> i64{
-    let multiplicacion:i64=num*num2;
-    //return multiplicacion;
-    multiplicacion
-    //println!("{}",resultado)
-}
+// fn restar (num:i64,num2:i64)-> i64{
+//     let resta =num -num2;
+//     // return resta
+//     resta
+//     // println!("{}",resultado)
+// }
 
-fn dividir(num:i64,num2:i64)->i64{
-    let division:i64=num/num2;
-    // return division
-    division
-    // println!("{}",resultado)
-}
+// fn multiplicar(num:i64,num2:i64)-> i64{
+//     let multiplicacion:i64=num*num2;
+//     //return multiplicacion;
+//     multiplicacion
+//     //println!("{}",resultado)
+// }
 
-fn modulo(num:i64,num2:i64)->i64{
-    let resultado:i64=num%num2;
-    //return resultado
-    resultado
-}
+// fn dividir(num:i64,num2:i64)->i64{
+//     let division:i64=num/num2;
+//     // return division
+//     division
+//     // println!("{}",resultado)
+// }
+
+// fn modulo(num:i64,num2:i64)->i64{
+//     let resultado:i64=num%num2;
+//     //return resultado
+//     resultado
+// }
+
+// fn palabra()-> String {
+//     let hello = String::from("Hello, world!");
+//     return hello;
+
+// }
+
 fn main() {
-    let numero:i64=5;
-    let numero2:i64= 2;
+    let mut contador:u64=0;
 
-    let resultado_suma=sumar(numero,numero2);
-    println!("Resultado de la suma: {} + {} es {}",numero,numero2,resultado_suma);
+    let resultado= loop {
+        // println!("Hola");
+        // println!("{}",contador);
+        
+        contador += 1;
+        
+        if contador >= 10{
+            break contador;
+        }
+    };
+    println!("el resultado es: {}",resultado)
 
-    let resultado_resta=restar(numero,numero2);
-    println!("Resultado de la resta: {} - {} es {}",numero,numero2,resultado_resta);
+    // let numero:i64=5;
+    // let numero2:i64= 4;
 
-    let resultado_multiplicacion=multiplicar(numero,numero2);
-    println!("Resultado de la multiplicación: {} * {} es {}",numero,numero2,resultado_multiplicacion);
+    // if numero2 == 1 {
+    //     println!("Es igual a  uno");
+    // }else if numero2 == 2{       
+    //     println!("Es igual a dos");
+    // }else{
+    //     println!("Else");
+    // }
 
-    let resultado_division=dividir(numero,numero2);
-    println!("Resultado de la división: {} / {} es {}",numero,numero2,resultado_division);
+    // let numero2:i64= 4;
+
+    // let numero3 = if numero2 == 4 { 22 } else {12};
+    
+    // println!("El valor es:  {}",numero3);
 
 
-    let resultado_modulo=modulo(numero,numero2);
-    println!("Resultado del modulo: {} % {} es {}",numero,numero2,resultado_modulo);
+
+    // let resultado_suma=sumar(numero,numero2);
+    // println!("Resultado de la suma: {} + {} es {}",numero,numero2,resultado_suma);
+
+    // let resultado_resta=restar(numero,numero2);
+    // println!("Resultado de la resta: {} - {} es {}",numero,numero2,resultado_resta);
+
+    // let resultado_multiplicacion=multiplicar(numero,numero2);
+    // println!("Resultado de la multiplicación: {} * {} es {}",numero,numero2,resultado_multiplicacion);
+
+    // let resultado_division=dividir(numero,numero2);
+    // println!("Resultado de la división: {} / {} es {}",numero,numero2,resultado_division);
+
+
+    // let resultado_modulo=modulo(numero,numero2);
+    // println!("Resultado del modulo: {} % {} es {}",numero,numero2,resultado_modulo);
+
+    // let resultado_palabra=palabra();
+    // println!("{}",resultado_palabra);
 
     // restar(numero,numero2);
     // multiplicar(numero, numero2);
