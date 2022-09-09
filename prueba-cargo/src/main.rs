@@ -95,23 +95,29 @@ impl Rectangulo{
 
 fn main() {
 
-    let rectangulo1 = Rectangulo{
-        ancho:20,
-        alto:40,
-    };
+    let numero=9;
+    let maximo_configurado= Some(numero);
+    if let Some(maximo) = maximo_configurado{
+        println!("El maximo configurado es: {}", maximo);
+    }
 
-    let rectangulo2= Rectangulo{
-        ancho:30,
-        alto:50
-    };
+    // let rectangulo1 = Rectangulo{
+    //     ancho:20,
+    //     alto:40,
+    // };
 
-    let rectangulo3=Rectangulo{
-        ancho:10,
-        alto:20
-    };
+    // let rectangulo2= Rectangulo{
+    //     ancho:30,
+    //     alto:50
+    // };
 
-    println!("El área del rectángulo es: {}",rectangulo1.area());
-    println!("¿El rectangulo 1 puede contener el rectangulo 2? {}", rectangulo1.puede_contener(&rectangulo2));
+    // let rectangulo3=Rectangulo{
+    //     ancho:10,
+    //     alto:20
+    // };
+
+    // println!("El área del rectángulo es: {}",rectangulo1.area());
+    // println!("¿El rectangulo 1 puede contener el rectangulo 2? {}", rectangulo1.puede_contener(&rectangulo2));
     // let usuario2 =crear_usuario(String::from("Rauwwwl"), String::from("raul@example.com"), 26);
     // println!("{}",usuario2.nombre)
     // println!("{}",usuario2.nombre);
