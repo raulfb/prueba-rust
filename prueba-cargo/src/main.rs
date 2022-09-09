@@ -59,27 +59,61 @@
 //     // cadena
 // }
 
-struct Usuario{
-    nombre:String,
-    email:String,
-    edad:u32,
-    activo:bool
+// struct Usuario{
+//     nombre:String,
+//     email:String,
+//     edad:u32,
+//     activo:bool
+// }
+
+// fn crear_usuario(nombre:String,email:String,edad:u32) -> Usuario{
+//     Usuario{
+//         nombre,
+//         email,
+//         edad,
+//         activo:true,
+//     }
+
+// }
+
+struct Rectangulo{
+    ancho:u32,
+    alto:u32
 }
 
-fn crear_usuario(nombre:String,email:String,edad:u32) -> Usuario{
-    Usuario{
-        nombre,
-        email,
-        edad,
-        activo:true,
+impl Rectangulo{
+    fn area(&self) ->u32{
+        self.ancho * self.alto
+    }
+
+    fn puede_contener(&self,otro:&Rectangulo)->bool{
+        self.ancho>otro.ancho && self.alto >otro.alto
     }
 
 }
 
 
 fn main() {
-    let usuario2 =crear_usuario(String::from("Rauwwwl"), String::from("raul@example.com"), 26);
-    println!("{}",usuario2.nombre)
+
+    let rectangulo1 = Rectangulo{
+        ancho:20,
+        alto:40,
+    };
+
+    let rectangulo2= Rectangulo{
+        ancho:30,
+        alto:50
+    };
+
+    let rectangulo3=Rectangulo{
+        ancho:10,
+        alto:20
+    };
+
+    println!("El área del rectángulo es: {}",rectangulo1.area());
+    println!("¿El rectangulo 1 puede contener el rectangulo 2? {}", rectangulo1.puede_contener(&rectangulo2));
+    // let usuario2 =crear_usuario(String::from("Rauwwwl"), String::from("raul@example.com"), 26);
+    // println!("{}",usuario2.nombre)
     // println!("{}",usuario2.nombre);
     // let mut usuario1 = Usuario{
     //     nombre: String::from("Raul"),
