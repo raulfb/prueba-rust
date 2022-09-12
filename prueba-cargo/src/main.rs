@@ -99,6 +99,7 @@ fn main() {
 
     let mut puntuaciones = HashMap::new();
     puntuaciones.insert(String::from("Warriors"), 121);
+    puntuaciones.insert(String::from("Warriors"), 244);
     puntuaciones.insert(String::from("Lakers"), 104);
 
     // let nombre_equipo = String::from("Warriors");
