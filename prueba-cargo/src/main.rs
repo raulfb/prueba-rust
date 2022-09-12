@@ -106,10 +106,11 @@ fn main() {
     // let puntuacion= puntuaciones.get(&nombre_equipo);
 
     // println!("{}", puntuacion);
-
-    for (clave,valor) in &puntuaciones {
-        println!("{}: {}",clave,valor);
-    }
+    let array_prueba=[112,33,44,22,33];
+    println!("{:?}",array_prueba);
+    // for (clave,valor) in &puntuaciones {
+    //     println!("{}: {}",clave,valor);
+    // }
 
     // let numero=9;
     // let maximo_configurado= Some(numero);
