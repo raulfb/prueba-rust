@@ -92,18 +92,31 @@
 
 // }
 
+// use core::panicking::panic;
+use std::fs::File;
+
 
 fn main() {
+    let f = File::open("hola.txt");
 
-    use std::collections::HashMap;
+    let f = match f {
+        Ok(fichero)=>fichero,
+        Err(error)=> panic!("Error abriendo el fichero: {:?}",error),
+    };
+    println!("{:?}",f);
 
-    let mut puntuaciones = HashMap::new();
-    // puntuaciones.insert(String::from("Warriors"), 121);
-    // puntuaciones.insert(String::from("Warriors"), 244);
-    puntuaciones.insert(String::from("Lakers"), 104);
-    puntuaciones.entry(String::from("Warriors")).or_insert(1000);
+    // let vector = vec![100,200,300,400,500];
+    // let aux = vector[9];
 
-    println!("{:?}",puntuaciones);
+    // use std::collections::HashMap;
+
+    // let mut puntuaciones = HashMap::new();
+    // // puntuaciones.insert(String::from("Warriors"), 121);
+    // // puntuaciones.insert(String::from("Warriors"), 244);
+    // puntuaciones.insert(String::from("Lakers"), 104);
+    // puntuaciones.entry(String::from("Warriors")).or_insert(1000);
+
+    // println!("{:?}",puntuaciones);
 
     // let nombre_equipo = String::from("Warriors");
     // let puntuacion= puntuaciones.get(&nombre_equipo);
