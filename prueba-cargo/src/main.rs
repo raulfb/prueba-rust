@@ -98,7 +98,7 @@ use std::io::ErrorKind;
 
 
 fn main() {
-    let f = File::open("hola.txt").unwrap();
+    let f = File::open("hola.txt").expect("eeeeee");
 
     // let f = match f {
     //     Ok(fichero)=>fichero,
