@@ -76,30 +76,52 @@
 
 // }
 
-struct Rectangulo{
-    ancho:u32,
-    alto:u32
-}
+// struct Rectangulo{
+//     ancho:u32,
+//     alto:u32
+// }
 
-impl Rectangulo{
-    fn area(&self) ->u32{
-        self.ancho * self.alto
-    }
+// impl Rectangulo{
+//     fn area(&self) ->u32{
+//         self.ancho * self.alto
+//     }
 
-    fn puede_contener(&self,otro:&Rectangulo)->bool{
-        self.ancho>otro.ancho && self.alto >otro.alto
-    }
+//     fn puede_contener(&self,otro:&Rectangulo)->bool{
+//         self.ancho>otro.ancho && self.alto >otro.alto
+//     }
 
-}
+// }
 
 
 fn main() {
 
-    let numero=9;
-    let maximo_configurado= Some(numero);
-    if let Some(maximo) = maximo_configurado{
-        println!("El maximo configurado es: {}", maximo);
+    use std::collections::HashMap;
+
+    let mut puntuaciones = HashMap::new();
+    puntuaciones.insert(String::from("Warriors"), 121);
+    puntuaciones.insert(String::from("Lakers"), 104);
+
+    // let nombre_equipo = String::from("Warriors");
+    // let puntuacion= puntuaciones.get(&nombre_equipo);
+
+    // println!("{}", puntuacion);
+
+    for (clave,valor) in &puntuaciones {
+        println!("{}: {}",clave,valor);
     }
+
+    // let numero=9;
+    // let maximo_configurado= Some(numero);
+    // if let Some(maximo) = maximo_configurado{
+    //     println!("El maximo configurado es: {}", maximo);
+    // }
+
+    // let mut v: Vec<i32>= Vec::new();
+    // v.push(5);
+    // v.push(10);
+    // v.push(98);
+    // v.pop();
+    // println!("La longitud del vector es: {}",v.len())
 
     // let rectangulo1 = Rectangulo{
     //     ancho:20,
