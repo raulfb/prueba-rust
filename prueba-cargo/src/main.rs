@@ -98,22 +98,22 @@ use std::io::ErrorKind;
 
 
 fn main() {
-    let f = File::open("hola.txt");
+    let f = File::open("hola.txt").unwrap();
 
-    let f = match f {
-        Ok(fichero)=>fichero,
-        Err(error)=> match error.kind() {
-            ErrorKind::NotFound => match File::create("hola.txt"){
-                Ok(fichero_creado)=> fichero_creado,
-                Err(e)=> panic!("Error creando el fichero : {:?}",e)
-            },
-            other_error => {
-               panic!("Error abriendo el fichero: {:?}",other_error) 
-            }
+    // let f = match f {
+    //     Ok(fichero)=>fichero,
+    //     Err(error)=> match error.kind() {
+    //         ErrorKind::NotFound => match File::create("hola.txt"){
+    //             Ok(fichero_creado)=> fichero_creado,
+    //             Err(e)=> panic!("Error creando el fichero : {:?}",e)
+    //         },
+    //         other_error => {
+    //            panic!("Error abriendo el fichero: {:?}",other_error) 
+    //         }
             
-        }
-    };
-    println!("{:?}",f);
+    //     }
+    // };
+    // println!("{:?}",f);
 
     // let vector = vec![100,200,300,400,500];
     // let aux = vector[9];
