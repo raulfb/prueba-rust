@@ -94,6 +94,7 @@
 
 // use core::panicking::panic;
 use std::fs::File;
+use std::io::ErrorKind;
 
 
 fn main() {
@@ -101,7 +102,16 @@ fn main() {
 
     let f = match f {
         Ok(fichero)=>fichero,
-        Err(error)=> panic!("Error abriendo el fichero: {:?}",error),
+        Err(error)=> match error.kind() {
+            ErrorKind::NotFound => match File::create("hola.txt"){
+                Ok(fichero_creado)=> fichero_creado,
+                Err(e)=> panic!("Error creando el fichero : {:?}",e)
+            },
+            other_error => {
+               panic!("Error abriendo el fichero: {:?}",other_error) 
+            }
+            
+        }
     };
     println!("{:?}",f);
 
