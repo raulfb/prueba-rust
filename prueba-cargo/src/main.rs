@@ -98,16 +98,19 @@ fn main() {
     use std::collections::HashMap;
 
     let mut puntuaciones = HashMap::new();
-    puntuaciones.insert(String::from("Warriors"), 121);
-    puntuaciones.insert(String::from("Warriors"), 244);
+    // puntuaciones.insert(String::from("Warriors"), 121);
+    // puntuaciones.insert(String::from("Warriors"), 244);
     puntuaciones.insert(String::from("Lakers"), 104);
+    puntuaciones.entry(String::from("Warriors")).or_insert(1000);
+
+    println!("{:?}",puntuaciones);
 
     // let nombre_equipo = String::from("Warriors");
     // let puntuacion= puntuaciones.get(&nombre_equipo);
 
     // println!("{}", puntuacion);
-    let array_prueba=[112,33,44,22,33];
-    println!("{:?}",array_prueba);
+    // let array_prueba=[112,33,44,22,33];
+    // println!("{:?}",array_prueba);
     // for (clave,valor) in &puntuaciones {
     //     println!("{}: {}",clave,valor);
     // }
